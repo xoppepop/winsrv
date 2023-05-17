@@ -1,2 +1,3 @@
-write-host "HELLO"!
-read-host
+Add-Computer -Restart
+Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -name "fDenyTSConnections" -value 0
+Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
